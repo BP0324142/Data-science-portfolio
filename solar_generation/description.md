@@ -12,17 +12,17 @@ These results could also influence solar farm placement. Choosing a generally wa
 
 The data used in this analysis is [available here](https://www.kaggle.com/datasets/pythonafroz/solar-powe-generation-data).
 
-Here's an example of that the data looks like:\
+Here's an example of that the data looks like.\
 ![First five rows of data](/images/01-top-five-rows.png)
 
 And here are some summary statistics. Sunshine, radiation and production have very high standard deviations, meaning that they have a large spread which could lead to misrepresentative clustering.\
 ![Summary statistics](/images/02-summary-stats.png)
 
-Some notes on the data:
+Notes on the data:
 * All rows were unique and there were no null values.
 * The data types for each row were int or float, so no categorical field encoding was necessary.
-* The dataset holds hourly values for each day. There is no point in analyising records without any energy generation, so these rows were dropped. This left >3k rows.
-* Data was missing for May and some radiation values were below 0 (obviously impossible). These rows were dropped with the 0 radiation rows.
+* The dataset holds hourly values for each day. There is no point in analyising records without any energy generation, so these rows were dropped. This left ~3.2k rows.
+* Data was missing for May and some radiation values were below 0 (obviously impossible). This introduces doubt about the accuracy of these data.
 <br/><br/>
 
 
@@ -36,27 +36,19 @@ K-means was chosen to categorise the conditions into meaningful groups (the resu
 
 ### EDA
 
-Figure 5 displays boxplots for each field after zero production records were removed. Most of these contain outliers, which could throw off clustering.
-
-Plot of power production over daily, weekly and monthly timescales:\
+Plot of power production over daily, weekly and monthly timescales. Note the dip in May that indicates missing data, which could affect clustering.\
 ![Time series](/images/06-time-series.png)
 
-Boxplots:\
+Here are boxplots for each field after zero production records were removed. Most of these contain outliers, which could throw off clustering.\
 ![Boxplots](/images/03-boxplots.png)
 
-Pairwise grids plot fields against one another to help identify patterns. Figure 6 scatterplots show broad spread for all pairs. The density plots are also useful, revealing one or more concentrations.
-
-Pairwise grid of all fields. Scatter plots in the top triangle, bar charts on the diagonal and density plots in the lower triangle:\
+This pairwise grid plots fields against one another to help identify patterns. Scatter plots in the top triangle, bar charts on the diagonal and density plots in the lower triangle. The scatterplots show broad spread for all pairs. The density plots are also useful, revealing one or more concentrations.\
 ![Pairwise grid of all fields](/images/04-pairwise-grid-original-data.png)
 
-A correlations plot can also reveal relationships between fields. Figure 7 shows strong positive correlation between sunshine/radiation, radiation/production, temperature/radiation and temperature/production, with the greatest between sunshine/production. There are also strong negative corelations between humidity/sunshine, humidity/radiation and humidity/production.
-
-Correlation matrix:\
+A correlations matrix can also reveal relationships between fields. This shows a strong positive correlation between sunshine/radiation, radiation/production, temperature/radiation and temperature/production, with the greatest between sunshine/production. There are also strong negative corelations between humidity/sunshine, humidity/radiation and humidity/production.\
 ![Correlation matrix](/images/05-correlation-matrix.png)
 
-As production and radiation have the highest correlation, its worth plotting their average hourly values to see how they correspond. Figures 9 and 10 indicates they follow one another quite closely.
-
-Average power production by hour of day\
+As production and radiation have the highest correlation, its worth plotting their average hourly values to see how they correspond. The following two column charts indicate they follow one another quite closely.\
 ![Mean power generation](/images/07-mean-kwh.png)
 ![Mean power generation](/images/11-mean-radiation.png)
 <br/><br/>
