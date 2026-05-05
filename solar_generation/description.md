@@ -56,29 +56,27 @@ As production and radiation have the highest correlation, its worth plotting the
 
 ### Training prep
 
-The elbow method indicates the optimal number of clusters (k) by plotting the within-cluster sum of squares (WCSS, or inertia) against k. This is equivalent to running the model several times with different values of k. Low inertia indicates a tight cluster and vice versa. The goal is to find the point of diminishing return, the so-called elbow [citation]. Figure 11 indicates k=3 as optimal.
+The elbow method indicates the optimal number of clusters (k) by plotting the within-cluster sum of squares (WCSS, or inertia) against k. This is equivalent to running the model several times with different values of k. Low inertia indicates a tight cluster and vice versa. The goal is to find the point of diminishing return, the so-called elbow [citation].
 
 Note that a cluster value of 1 is never useful, as a single cluster represents the whole dataset. A high k is also unhelpful as it becomes harder to assign meaningful differences to each cluster.
 
 Other methods for determining k are available. These include the silhouette method (calculating intra-cluster cohesion/separation), gap statistic (compares WCSS to random points), Calinski-Harabasz index (rewards higher cohesion) and hierarchical clustering (use a dendrogram to visualise data).
 
-Elbow method plot:\
+Elbow method plot, indicating k=3 as optimal.\
 ![Elbow curve](/images/08-elbow.png)
 <br/><br/>
 
 
 ## Results
 
-The model was run after choosing k. Because the k-means algorithm is sensitive to large numbers, each field was scaled to prevent any from introducing bias. Figure 13 shows the 7-dimensional coordinates of the three clusters. 
+The model was run after choosing k. Because the k-means algorithm is sensitive to large numbers, each field was scaled to prevent any from introducing bias. 
 
-There is little separation within the following fields, meaning that they do not contribute highly to the centroid position: windspeed, pressure, temperature, humidity. Sunshine is more spread out, meaning it has a moderate effect on centroids. Radiation and production are highly spread, meaning that they are the main determinants of centroid position. This latter reinforces the relationship indicated in the correlation matrix.
-
-Centroid locations:\
+First lets look at centroid locations, showing the 7-dimensional coordinates of the three clusters. There is little separation within the following fields, meaning that they do not contribute highly to the centroid position: windspeed, pressure, temperature, humidity. Sunshine is more spread out, meaning it has a moderate effect on centroids. Radiation and production are highly spread, meaning that they are the main determinants of centroid position. This latter reinforces the relationship indicated in the correlation matrix.\
 ![Coefficients](/images/09-coefficients.png)
 
-Pairwise grid with cluster differentiated by colour. Production shows clear banding of low/mid/upper generation across all other variables. The low generation band seems to be dominant across all other pairs, indicating that the system spending most of the daylight hours generating little power. There seems to be some overlap between the mid and upper generation bands, indicating the other fields have a weak influence on generation.
+A pairwise grid with cluster differentiated by colour is a more viual prepresentation of the results. Production shows clear banding of low/mid/upper generation across all other variables. The low generation band seems to be dominant across all other pairs, indicating that the system spending most of the daylight hours generating little power. There seems to be some overlap between the mid and upper generation bands, indicating the other fields have a weak influence on generation.
 
-Pairwise grid of each field showing scatter by cluster assignment in the lower triangle, plus area charts on the diagonal:\
+Pairwise grid of each field showing scatter by cluster assignment in the lower triangle, plus area charts on the diagonal.\
 ![Pairwise grid](/images/10-pairwise-results.png)
 <br/><br/>
 
