@@ -13,12 +13,12 @@ The data used in this analysis is [available here](https://www.kaggle.com/datase
 Some notes on the data:
 * All rows were unique and there were no null values.
 * The data types for each row were int or float, so no categorical field encoding was necessary.
-* The dataset holds hourly values for each day. As there is no point in analyising records without any energy generation, these rows were dropped.
+* The dataset holds hourly values for each day. There is no point in analyising records without any energy generation, so these rows were dropped.
 
-Here's an example of that the data looks like:
+Here's an example of that the data looks like:\
 ![First five rows of data](#)
 
-And here are some summary statistics. Sunshine, radiation and production have very high standard deviations, meaning that they have a large spread which could lead to misrepresentative clustering.
+And here are some summary statistics. Sunshine, radiation and production have very high standard deviations, meaning that they have a large spread which could lead to misrepresentative clustering.\
 ![Summary statistics](#)
 
 ## Methodology
