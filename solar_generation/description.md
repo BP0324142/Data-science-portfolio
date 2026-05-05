@@ -38,6 +38,9 @@ K-means was chosen to categorise the conditions into meaningful groups (the resu
 
 Figure 5 displays boxplots for each field after zero production records were removed. Most of these contain outliers, which could throw off clustering.
 
+Plot of power production over daily, weekly and monthly timescales:\
+![Time series](/images/06-time-series.png)
+
 Boxplots:\
 ![Boxplots](/images/03-boxplots.png)
 
