@@ -6,6 +6,7 @@ This analysis could prove useful for anyone considering home solar panels. Livin
 
 These results could also influence solar farm placement. Choosing a generally warm, dry, sunny location should increase ROI. 
 <br/>
+<br/>
 
 ## Data source and cleaning
 
