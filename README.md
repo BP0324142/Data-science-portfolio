@@ -12,4 +12,4 @@ I am a data science appretice at BPP university.
 
 Short description
 
-[View project](solar-generation/description.md)
+[View project](/solar-generation/description.md)
