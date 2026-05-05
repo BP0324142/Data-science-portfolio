@@ -105,9 +105,9 @@ At the time of writing, the data is somewhat old, being from 2017. Solar efficie
 
 ## Conclusion
 
-Results show that radiation is the main determinant of production. Sunshine would intuitively be main factor. However, radiation measures the actual energy transferred to the panels, whereas the sunshine value merely measures sunshine time. Clouds only partly block solar energy, and thick or high clouds can still allow substantial radiation through [citation]. 
+Results show that radiation is the main determinant of production. Sunshine would intuitively be main factor. However, radiation measures the actual energy transferred to the panels, whereas the sunshine value merely measures sunshine time. Clouds only partly block solar energy, and thick or high clouds can still allow substantial radiation through. 
 
-The model did differentiate three clusters based on production. Sunshine, humidity and temperature all influence production, but the main factor is radiation. These variables are of course linked and follow intuition; that production is generally best on sunny, dry, warm days and vice versa. Also, party clouded skies generally produce significantly more power than overcast days.
+The model did differentiate three clusters based on production. Sunshine, humidity and temperature all influence production, but the main factor is radiation. These variables are of course linked and follow intuition; that production is generally best on sunny, dry, warm days and vice versa. Also, partly clouded skies generally produce significantly more power than overcast days.
 
 However, it’s hard to draw conclusions about the fields other than radiation/production due to the frequent overlap between clusters 1 and 2. 
 
