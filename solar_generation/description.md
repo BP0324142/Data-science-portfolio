@@ -5,7 +5,7 @@ The aim of this project was to use k-means clustering to discover which atmosphe
 This analysis could prove useful for anyone considering home solar panels. Livings in an area with frequent partial cloud could mean that the panels generate around 50% as much as those with regularly sunny skies. This result can be used to calculate average panel output and thus time to break even on the installation cost. 
 
 These results could also influence solar farm placement. Choosing a generally warm, dry, sunny location should increase ROI. 
-\
+<br/>
 
 ## Data source and cleaning
 
